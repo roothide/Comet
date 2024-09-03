@@ -12,7 +12,7 @@ internal extension Bundle {
         #if ROOTLESS
         let path = "/var/jb/Library/Frameworks/Comet.framework/Resources.bundle/"
         #else
-        let path = "/Library/Frameworks/Comet.framework/Resources.bundle/"
+        let path = jbroot("/Library/Frameworks/Comet.framework/Resources.bundle/")
         #endif
         
         if let bundle = Bundle(path: path) {
